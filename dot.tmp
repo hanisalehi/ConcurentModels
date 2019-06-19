@@ -1,0 +1,18 @@
+digraph p_P {
+size="8,10";
+  GT [shape=box,style=dotted,label="P"];
+  GT -> S1;
+	S1 -> S2  [color=black,style=bold,label="n = 1"];
+	S2 -> S3  [color=black,style=bold,label="printf('Process P, n = %d ',n)"];
+	S3 -> S0  [color=black,style=solid,label="-end-"];
+  S3 [color=blue,style=bold,shape=box];
+}
+digraph p_Q {
+size="8,10";
+  GT [shape=box,style=dotted,label="Q"];
+  GT -> S1;
+	S1 -> S2  [color=black,style=bold,label="n = 2"];
+	S2 -> S3  [color=black,style=bold,label="printf('Process Q, n = %d ',n)"];
+	S3 -> S0  [color=black,style=solid,label="-end-"];
+  S3 [color=blue,style=bold,shape=box];
+}
